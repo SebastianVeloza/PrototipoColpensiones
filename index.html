@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reto</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mediaQ.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="h-menu">
+            <img src="./img/Trazado 184.svg" alt="">
+            <h1>Menu</h1>
+        </div>
+        <div class="h-logo">
+            <img src="./img/iconGOVCO.svg" alt="">
+        </div>
+        <div class="h-logo2">
+            <img src="./img/Imagen 2.png" alt="">
+        </div>
+
+        <div class="h-soporte-img">
+            <img src="./img/Grupo 699.png" alt="">
+        </div>
+        <div class="h-soporte-h1">
+            <h1>Soporte en línea</h1>
+        </div>
+
+
+        <div class="h-usuario-img">
+
+            <img src="./img/Grupo 1775.png" alt="">
+        </div>
+        <div class="h-usuario-h1">
+            <h1>Juan Perez</h1>
+        </div>
+    </header>
+
+    <section class="sesion">
+        <div class="sesion-logo">
+            <img src="./img/iconColp.svg" alt="Logo Colpensiones">
+        </div>
+        <div class="sesion-agendamiento">
+            <h1>AGENDAMIENTO</h1>
+            <p>Un asesor le atendra online desde la comodidad de su casa u oficina</p>
+        </div>
+    </section>
+    <section class="sesion-calendario">
+        <div class="calendario">
+            <div class="c-titulo">
+                <h1>SELECCIONE DÍA Y HORA </h1>
+                <p>Para su cita de acompañamiento virtual</p>
+            </div>
+            <div class="c-mayo">
+                <h1 id="mes-mayo">Mayo</h1>
+                <br>
+                <div class="c-mayo-n">
+                    <div onclick=mayo(this.id) id="mes-mayo-25">
+                        <p class="mm mes-mayo-lunes" id="mes-mayo-lunes">Lunes</p><br>
+                        <h1>25</h1>
+                    </div>
+                    <div onclick=mayo(this) id="mes-mayo-26">
+                        <p class="mm mes-mayo-martes" id="mes-mayo-martes">Martes</p><br>
+                        <h1 id="mes-mayo-26">26</h1>
+                    </div>
+                    <div onclick=mayo(this) id="mes-mayo-27">
+                        <p class="mm mes-mayo-miercoles" id="mes-mayo-miercoles">Miercoles</p><br>
+                        <h1 id="mes-mayo-27">27</h1>
+                    </div>
+                    <div onclick=mayo(this) id="mes-mayo-28">
+                        <p class="mm" id="mes-mayo-jueves">Jueves</p><br>
+                        <h1 id="mes-mayo-28">28</h1>
+                    </div>
+                    <div onclick=mayo(this) id="mes-mayo-29">
+                        <p class="mm" id="mes-mayo-viernes">Viernes</p><br>
+                        <h1 id="mes-mayo-20">29</h1>
+                    </div>
+                    <div onclick=mayo(this) id="mes-mayo-30">
+                        <p class="mm" id="mes-mayo-lunes2">Lunes</p><br>
+                        <h1 id="mes-mayo-30">30</h1>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+
+            </div>
+            <div class="c-junio">
+                <h1 id="mes-junio">Junio</h1>
+                <br>
+                <div class="c-junio-n">
+                    <div onclick=junio(this) id="mes-junio-25">
+                        <p name="mm" id="mes-junio-lunes">Lunes</p><br>
+                        <h1 id="mes-junio-25">25</h1>
+                    </div>
+                    <div onclick=junio(this) id="mes-junio-26">
+                        <p name="mm" id="mes-junio-martes">Martes</p><br>
+                        <h1 id="mes-junio-26">26</h1>
+                    </div>
+                    <div onclick=junio(this) id="mes-junio-27">
+                        <p name="mm" id="mes-junio-miercoles">Miercoles</p><br>
+                        <h1 id="mes-junio-27">27</h1>
+                    </div>
+                    <div onclick=junio(this) id="mes-junio-28">
+                        <p name="mm" id="mes-junio-jueves">Jueves</p><br>
+                        <h1 id="mes-junio-28">28</h1>
+                    </div>
+                    <div onclick=junio(this) id="mes-junio-29">
+                        <p name="mm" id="mes-junio-viernes">Viernes</p><br>
+                        <h1 id="mes-junio-29">29</h1>
+                    </div>
+                    <div onclick=junio(this) id="mes-junio-30">
+                        <p name="mm" id="mes-junio-lunes2">Lunes</p><br>
+                        <h1 id="mes-junio-30">30</h1>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="modal ">
+        <div class="modal__container">
+            <div class="modal-title">
+                <img onclick=cerrar() src="./img/Grupo 1765.svg" alt="Cerrar">
+                <h2 id="modal-dia">
+                    </h1>
+                    <h1 id="modal-numero"></h1>
+                    <h2 id="modal-mes">
+                        </h1>
+
+            </div>
+            <p></p>
+            <div class="modal-horas">
+                <h1>8: 00 am</h1>
+            </div>
+            <div class="modal-horas">
+                <h1>9: 00 am</h1>
+            </div>
+            <div class="modal-horas">
+                <h1>10: 00 am</h1>
+            </div>
+            <div class="modal-horas">
+                <h1>11: 00 am</h1>
+            </div>
+            <div class="modal-horas">
+                <h1>12: 00 am</h1>
+            </div>
+            <div class="modal-horas">
+                <h1>2: 00 pm</h1>
+            </div>
+            <div class="modal-horas">
+                <h1>3: 00 pm</h1>
+            </div>
+            <div class="modal-horas">
+                <h1>4: 00 pm</h1>
+            </div>
+            <div class="modal-horas">
+                <h1>5: 00 pm</h1>
+            </div>
+            <a href="confirm.html" class="modal__close">
+                <p>Confirmar cita</p>
+            </a>
+        </div>
+
+    </section>
+
+
+
+    <!--  <script src="js/main.js"></script> -->
+    <script src="js/main2.js"></script>
+
+</body>
+
+</html>
